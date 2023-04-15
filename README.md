@@ -6,6 +6,8 @@ The app allows users to track inventory levels in real-time, and it provides ins
 
 ## Database Structure
 
+With this structure, you can create different organizations and add products to their inventories. For each organization, you can create a job work with a name and a creation date. As the job work progresses, you can add entries to the JobWorkEntries table with the product used, its quantity, and the date it was used. Once the job work is completed, you can set its completion date. You can then query the database to retrieve information about the inventory levels and job work history for each organization.
+
 **1. Organizations table:**
 
     id (integer, primary key)
@@ -38,3 +40,5 @@ The app allows users to track inventory levels in real-time, and it provides ins
     product_id (integer, foreign key to Products table)
     quantity (integer)
     entry_date (datetime)
+    
+    
